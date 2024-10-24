@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | The Bengal Kitchen</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="login-container">
+        <h1>The Bengal Kitchen</h1>
+        <h2>Let's Get Started</h2>
+
+        <!-- Login form -->
+        <form method="POST" action="login.php">
+            <input type="text" name="username" placeholder="Enter your username" required><br>
+            <input type="password" name="password" id="password" placeholder="Enter your password" required><br>
+            
+            <!-- Checkbox to show/hide password -->
+            <label>
+                <input type="checkbox" onclick="togglePassword()"> Show Password
+            </label><br>
+
+            <button type="submit">Login</button>
+        </form>
+        
+
+    
+    <p>Don't have an account? <a href="signup.html">Sign Up</a></p>
+    </div>
+
+    <!-- JavaScript to toggle password visibility -->
+    <script>
+        function togglePassword() {
+            var passwordField = document.getElementById("password");
+            if (passwordField.type === "password") {
+                passwordField.type = "text";
+            } else {
+                passwordField.type = "password";
+            }
+        }
+    </script>
+</body>
+</html>

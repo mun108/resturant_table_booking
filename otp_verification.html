@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verify OTP - The Bengal Kitchen</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <div class="container">
+        <form id="otpForm" method="POST" action="verify_otp.php">
+            <input type="text" name="otp" id="otp" placeholder="Enter OTP" required>
+            <button type="submit" class="btn">Verify</button>
+        </form>
+
+        <p id="resendOtp" style="display: none;">Didn't receive OTP? <a href="#">Resend OTP</a></p>
+
+        <script>
+            var countdown = 5;
+            var otpTimer = setInterval(function() {
+                countdown--;
+                if (countdown <= 0) {
+                    document.getElementById('resendOtp').style.display = 'block';
+                    clearInterval(otpTimer);
+                }
+            }, 1000);
+        </script>
+    </div>
+</body>
+</html>

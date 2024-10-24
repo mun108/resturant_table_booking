@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bengal Kitchen</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <!--Navbar -->
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>The Bengal Kitchen</h1>
+            </div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- banner section  -->
+    <section class="contact-banner">
+        <img src="images/banner2.png"
+            alt="Welcome to our Contact Us page">
+        <h1>Get in Touch With Us</h1>
+        <p>
+          We're here to answer any questions you may have.
+          </p>
+    </section>
+    
+     <!-- Contact form -->
+     <section class="contact-container">
+        <div class="form-container">
+            <h2>Your Details</h2>
+            <form action="contact.php" method="POST">
+
+                <label for="name">Enter your Name: </label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email: </label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone: </label>
+                <input type="tel" id="phone" name="phone">
+
+                <label for="message">Message: </label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <button type="submit" class="submit-button">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    
+    <!--Footer-->
+    <footer>
+        <button class="button button1">
+            <a href="sitemap.html" class="button">Sitemap</a>
+        </button>
+        <p>Contact us at: tbk@thebengalkitchen.com | Phone: 123-456-7890 </p>
+        <p>Address: 123 Bengal Street, Kolkata, India </p>
+        <p>Opening Hours: 10 AM - 10 PM</p>
+        <div class="social-media">
+            <a href="#">Facebook</a>| <a href="#">Twitter</a> | <a href="#">Instagram</a>
+        </div>
+        <p>&copy; 2024 The Bengal Kitchen</p>
+        <!--<script src="js/script.js"></script>-->
+    </footer>
+
+   <!--<?php include 'footer.php'; ?>-->
+</body>
+</html>
